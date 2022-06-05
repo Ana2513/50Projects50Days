@@ -1,6 +1,8 @@
 const panels = document.querySelectorAll('.panel')
 const elementos = document.querySelectorAll('.panel_ele')
 
+var element
+
 panels.forEach((panel)=>{
     panel.addEventListener('click',()=>{
         removeActiveClasses()
@@ -12,47 +14,31 @@ elementos.forEach((panel_ele)=>{
     panel_ele.addEventListener('click',()=>{
         removeVisibleClasses()
         removeActiveClasses()
+        addDisableClasses()
+
         if (panel_ele.classList.contains('pyro')){
        
-            panels.forEach((panel)=>{
-                if(panel.classList.contains('pyro'))
-                panel.classList.add('visible') 
-           })
+            elementsSelectClass('pyro')
        }
         if (panel_ele.classList.contains('hydro')){
        
-            panels.forEach((panel)=>{
-                if(panel.classList.contains('hydro'))
-                panel.classList.add('visible') 
-           })
+            elementsSelectClass('hydro')
        }
         if (panel_ele.classList.contains('electo')){
        
-            panels.forEach((panel)=>{
-                if(panel.classList.contains('electo'))
-                panel.classList.add('visible') 
-           })
+            elementsSelectClass('electo')
        }
         if (panel_ele.classList.contains('cryo')){
        
-            panels.forEach((panel)=>{
-                if(panel.classList.contains('cryo'))
-                panel.classList.add('visible') 
-           })
+            elementsSelectClass('cryo')
        }
        if (panel_ele.classList.contains('anemo')){
        
-        panels.forEach((panel)=>{
-            if(panel.classList.contains('anemo'))
-            panel.classList.add('visible') 
-       })
-      }
+             elementsSelectClass('anemo')
+        }
         if (panel_ele.classList.contains('geo')){
        
-             panels.forEach((panel)=>{
-                 if(panel.classList.contains('geo'))
-                 panel.classList.add('visible') 
-            })
+            elementsSelectClass('geo')
         }
 
 
@@ -71,3 +57,22 @@ function removeVisibleClasses() {
     })
 }
 
+function addDisableClasses() {
+    panels.forEach(panel=>{
+        panel.classList.add('disable')
+    })
+}
+
+function removeDisableClasses() {
+    panels.forEach(panel=>{
+        panel.classList.remove('disable')
+    })
+}
+
+function elementsSelectClass(element){
+    panels.forEach((panel)=>{
+        if(panel.classList.contains(element)){
+        panel.classList.remove('disable')  
+        }
+   })
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Grass Bridge</title>
+</head>
+<body>
+    <div class="container" >
+        <h1>Grass Bridge</h1>
+        <div class="life" >
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div> 
+            <button class="btn restart" id="start" ><i class="fas fa-arrow-rotate-left"></i></button>
+        </div>
+        
+        <div class="progress-container red" >
+          <div class="progress" id="progress"></div>
+          <div class="circle red"></div>
+          <div class="circle red"></div>
+          <div class="circle red"></div>
+          <div class="circle red"></div>
+          <div class="circle red"></div>
+        </div>
+
+        <div class="progress-container blue" >
+            <div class="progress" id="progress"></div>
+            <div class="circle blue"></div>
+            <div class="circle blue"></div>
+            <div class="circle blue"></div>
+            <div class="circle blue"></div>
+            <div class="circle blue"></div>
+          </div>
+
+          <div class="progress-container green" >
+            <div class="progress" id="progress"></div>
+            <div class="circle green"></div>
+            <div class="circle green"></div>
+            <div class="circle green"></div>
+            <div class="circle green"></div>
+            <div class="circle green"></div>
+          </div>
+          <div>
+             <button class="btn red" id="red" >Red</button>
+             <button class="btn blue" id="blue">Blue</button>
+             <button class="btn green" id="green">Green</button>
+          </div>
+          <div class="result">
+            <div class='win' style="display: none"><h1>Winner</h1></div>
+            <div class="lose" style="display: none"><h1>Loser</h1></div>
+          </div>
+
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>

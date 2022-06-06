@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=muli&display=swap');
+
+:root{
+  --line-border-fill:#0096FF;
+  --line-border-empty:#e0e0e0;
+  --red:#FF3131;
+  --blue:#0096FF;
+  --green:#7CFC00;
+  --gray:#696969;
+  --disable:#e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f7fb;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container{
+  text-align: center;
+  justify-content: center;
+}
+
+
+.life{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.heart{
+  background-image: url(images/heartfull.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 26px;
+  width: 30px;
+  margin: 20px 10px;
+}
+
+.heart.empty{
+  background-image: url(images/heartempty.png);
+}
+
+.progress-container{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 450px; 
+}
+
+
+.progress {
+  background-color: #e0e0e0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+.circle{
+  background-color: #fff;
+  background-image: none;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .4s ease;
+}
+
+.circle.active{
+  background-image: url(images/player.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.circle.red{
+  border: 3px solid  var(--red);
+}
+.circle.blue{
+  border: 3px solid  var(--blue);
+}
+.circle.green{
+  border: 3px solid  var(--green);
+}
+
+.circle.hole{
+  background-color: #000;
+}
+
+.btn{
+  color:#fff;
+  background-color:var(--gray);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit ;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.btn.red{
+  background-color:var(--red);
+}
+
+.btn.blue{
+  background-color:var(--blue);
+}
+
+.btn.green{
+  background-color:var(--green);
+}
+
+.btn.restart{
+  margin-left: 230px;
+}
+
+.btn:disabled{
+  background-color:var(--disable);
+  cursor: not-allowed;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+

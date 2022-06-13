@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --color: #fff;
+  --color-background: #333;
+
+  --color-btn-background: rgba(255, 255, 255, 0.2);
+
+  --image-first: url('https://raw.githubusercontent.com/bradtraversy/50projects50days/master/split-landing-page/ps.jpg');
+  --image-last: url('https://raw.githubusercontent.com/bradtraversy/50projects50days/master/split-landing-page/xbox.jpg');
+  --gradient-first: linear-gradient(
+    rgba(87, 84, 236, 0.8),
+    rgba(87, 84, 236, 0.8)
+  );
+  --gradient-last: linear-gradient(
+    rgba(28, 122, 28, 0.8),
+    rgba(28, 122, 28, 0.8)
+  );
+
+  --hover-width: 75%;
+  --non-hover-width: 25%;
+
+  font-size: calc(0.5rem + 0.5vw);
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  white-space: nowrap;
+  color: var(--color);
+}
+body {
+  background-color: var(--color-background);
+}
+
+h1{
+  margin-bottom: 10px;
+}
+
+#landing_split {
+  display: flex;
+}
+
+#landing_split > * {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  flex: 1 1 20vw;
+  transition: all 0.8s ease-in-out;
+}
+
+#first {
+  background-image: var(--gradient-first), var(--image-first);
+  background-blend-mode: normal;
+  background-size: cover;
+  background-position: center center;
+}
+
+#last {
+  background-image: var(--gradient-last), var(--image-last);
+  background-blend-mode: normal;
+  background-size: cover;
+}
+
+#first:hover {
+  flex-grow: 75;
+}
+
+#last:hover {
+  flex-grow: 75;
+}
+
+.btn {
+  font-size: 1.4rem;
+  padding: 0.5em 1em;
+  background-color: var(--color-btn-background);
+  border: 1px solid var(--color);
+  color: var(--color);
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+a.btn:hover {
+  transform: scale(1.2);
+}
+
+#landing_split h2 {
+  font-size: 3rem;
+  margin-bottom: 1em;
+}
+
